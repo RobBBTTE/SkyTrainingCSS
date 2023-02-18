@@ -1,0 +1,188 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles3.css">
+
+
+
+  <script>
+    function error(){
+        alert("You done wrong")
+    }
+    function print(){
+        alert(text.value)
+    }
+    function add(){
+        let a = num1.value
+        let b = num2.value
+        let c = parseInt(a) + parseInt(b)
+        num3.value = c
+    }
+    function calculateResults(){
+        let marks1 = parseInt(physics.value)
+        let marks2 = parseInt(chemistry.value)
+        let marks3 = parseInt(maths.value)
+        let total = marks1 + marks2 + marks3
+        let per = total*100/450
+
+        totalmarks.value = total
+        percentage.value = per
+        if(per >= 60){
+            result.value = "Pass"
+        }
+        if(per < 60){
+            result.value = "Fail"
+        }
+    }
+
+    function doSomething() {
+        let a = parseInt(t1.value)
+            a = a + 1
+            t1.value = a
+        }
+
+    function doThisNow(){
+            t1.value = "0"
+        }
+
+    function doMaths(){
+        a = fn.value
+        b = fn2.value
+
+        if(a == ""){
+            alert("Missing first number")
+            fn.focus()
+        } else {
+
+            if(b == ""){
+                alert("Missing second number!!")
+                fn2.focus()
+            }
+        } else {
+            res.value = parseInt(fn.value) + parseInt(fn2.value)
+        }
+    }
+
+</script> 
+
+</head>
+
+<body>
+
+    <center><h1>hey this is rob's page</h1>
+    <b><i>i'm still learning</i></b></center>
+
+
+    <ul>
+      <li><a href="page1.html">ONE</a></li>
+      <li><a href="Page2.html">TWO</a></li>
+      <li><a href="Page3.html">THREE</a></li>
+      <li><a href="Page4.html">FOUR</a></li>
+    </ul>
+    <br>
+    <br>
+    <label for="text">Enter text here</label>
+    <input type="text" 
+           id="text">
+
+    <input type="button" 
+           value="Click Me" 
+           onclick="print()">
+
+
+    <br>
+    <br>
+    <table bgcolor="lightgray" id="table">
+        <tr>
+            <td>First Number:</td>
+            <td><input type="text" 
+           id="num1"></td>
+        </tr>
+        <tr>
+            <td>Second Number:</td>
+            <td><input type="text" 
+                       id="num2"></td>
+        </tr>
+        <tr>
+            <td>Result:</td>
+            <td><input type="text" 
+                  id="num3"></td>
+        </tr>
+    </table>
+                  <br>      
+    <input type="button" 
+           value="Click To Add" 
+           onclick="add()">
+
+
+           <br>
+           <br>
+        <table id="table" bgcolor="lightgray">
+            <tr>
+                <td> Physics: </td>
+                <td> <input type="text" id="physics"></td>
+            </tr>
+            
+            <tr>
+                <td> Chemistry: </td>
+                <td> <input type="text" id="chemistry"></td>
+            </tr>
+            <tr>
+                <td> Maths: </td>
+                <td> <input type="text" id="maths"></td>
+            </tr>
+            
+            <tr bgcolor="darkgray">
+                <td> Total Marks: </td>
+                <td> <input type="text" id="totalmarks"></td>
+            </tr>
+            <tr bgcolor="darkgray">
+                <td> Percentage: </td>
+                <td> <input type="text" id="percentage"></td>
+            </tr>
+            <tr bgcolor="darkgray">
+                <td> Result: </td>
+                <td> <input type="text" id="result"></td>
+            </tr>
+        </table>
+        <br>
+        <input type="button" onclick="calculateResults()" value="Show Results">
+        <br>
+
+
+        <br>
+        <br>
+        <input type="text" id="t1" value="0">
+        <br>
+        <br>
+        <input type="button" 
+               value="F I R S T  B U T T O N"
+               onmousemove="doSomething()"
+               onmouseleave="doThisNow()"
+               >
+        <br>
+        <br>                
+        <table id="table" bgcolor="lightgray">
+            <tr>
+                <td> First Number </td>
+                <td> <input type="text" id="fn"></td>
+            </tr>
+            
+            <tr>
+                <td> Second Number </td>
+                <td> <input type="text" id="fn2"></td>
+            </tr>
+            <tr>
+                <td> Result: </td>
+                <td> <input type="text" id="res"></td>
+            </tr>
+        </table>
+        <br>
+        <input 
+            type="button" 
+            value=" + "
+            onclick="doMaths()">
+
+</body>
+</html>

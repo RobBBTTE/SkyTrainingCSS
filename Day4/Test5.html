@@ -1,0 +1,21 @@
+<html>
+    <script>
+    function doSomething(){
+        
+        t1.value = event.clientX
+        t2.value = event.clientY
+        if(event.clientX>300){
+            s.style.color="green"
+        }
+        if(event.clientX<300){
+            s.style.color="blue"
+        }
+ 
+    }
+</script>
+<body onmousemove="doSomething()">
+    <input id="t1" value="0">
+    <input id="t2" value="0">
+    <span id="s"> <h1> Shafeeq</h1></span>
+</body>
+</html>
